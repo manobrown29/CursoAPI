@@ -4,6 +4,7 @@ import com.curso_api.dto.CursoRequestDTO;
 import com.curso_api.dto.CursoResponseDTO;
 import com.curso_api.entity.Curso;
 import com.curso_api.service.CursoService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@Tag(name = "Cursos", description "Endipoins para gerenciar cursos")
+@Tag(name = "Cursos", description = "Endipoins para gerenciar cursos")
 @RequestMapping("/curso")
 public class CursoController {
     private final CursoService cursoService;
