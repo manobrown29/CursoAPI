@@ -2,7 +2,7 @@ name: CI da API
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
   pull_request:
     branches: ["**"]
 
