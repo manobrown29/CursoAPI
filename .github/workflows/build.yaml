@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: ["**"]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,11 +14,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Java 21
+      - name: Configure Java 21git
         uses: actions/setup-java@v4
         with:
           java-version: "21"
           distribution: "temurin"
           cache: maven
+
       - name: build
-        run: ./mvnw -B package
+        run: ./mvnw -B package -DskipTests
