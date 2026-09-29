@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-
+@Tag(name = "Cursos", description "Endipoins para gerenciar cursos")
 @RequestMapping("/curso")
 public class CursoController {
     private final CursoService cursoService;

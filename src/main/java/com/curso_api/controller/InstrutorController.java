@@ -3,6 +3,7 @@ package com.curso_api.controller;
 import com.curso_api.dto.InstrutorRequestDTO;
 import com.curso_api.dto.InstrutorResponseDTO;
 import com.curso_api.service.InstrutorService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
+@Tag(name = "Instrutores", description = "Endipoins para gerenciar Instrutores")
 @RequestMapping("/instrutores")
 public class InstrutorController {
 
